@@ -1,0 +1,746 @@
+{
+	"id": "4d3ef2de-6498-40ce-88b0-3de24dbaf136",
+	"name": "Starter Pack",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"7a68136b-b9bb-4f42-8c15-82759cc612ad"
+	],
+	"folders": [
+		{
+			"id": "7a68136b-b9bb-4f42-8c15-82759cc612ad",
+			"name": "Testing",
+			"description": null,
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "16babfc4-3cf8-4a54-9623-8edba9be96d5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b74912db-4bd4-4f7f-82a4-4f11d61f2952",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"collection": "4d3ef2de-6498-40ce-88b0-3de24dbaf136",
+			"folder": null,
+			"order": [
+				"43d6df76-afac-4ac9-885f-b80de1ac6ef6",
+				"5aba14e8-7249-47a3-8d72-d9afb886c1c8",
+				"1804334f-6817-47ce-9ab3-8259dde7dba7",
+				"77309fa8-e1d3-41dc-bb2f-e0a3f1c9595a",
+				"f6c85455-1a6c-49c5-adda-9dd4cfb4902d",
+				"dd953cb7-fdb1-46f5-a9b3-83cc0373292c"
+			],
+			"folders_order": []
+		}
+	],
+	"requests": [
+		{
+			"id": "1804334f-6817-47ce-9ab3-8259dde7dba7",
+			"name": "List all testing",
+			"url": "{{proto}}://{{domain-url}}/testing/all",
+			"description": "Get all testing data",
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				},
+				{
+					"key": "access-token",
+					"value": "admtoken_access_1",
+					"type": "text"
+				},
+				{
+					"key": "app-version",
+					"value": "{{app-version}}",
+					"type": "text"
+				},
+				{
+					"key": "platform",
+					"value": "{{platform}}",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "57b400fd-7c0c-4cab-9ee2-d768052ae1d8",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"folder": "7a68136b-b9bb-4f42-8c15-82759cc612ad",
+			"responses": [
+				{
+					"id": "96297e67-8b55-4d45-b58f-733efce3fbc4",
+					"name": "List all testing",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\"status\":\"success\",\"statusCode\":200,\"payload\":[{\"test_id\":2,\"test_name\":\"john doe\",\"test_type\":\"member\",\"created_date\":\"2018-08-28 11:00:57\",\"updated_date\":\"2018-08-29 03:57:06\"},{\"test_id\":3,\"test_name\":\"john doe\",\"test_type\":\"member\",\"created_date\":\"2018-08-28 11:37:05\",\"updated_date\":null},{\"test_id\":5,\"test_name\":\"john doe\",\"test_type\":\"member\",\"created_date\":\"2018-08-29 03:57:34\",\"updated_date\":null}]}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "6fda316d-64d8-4348-8f5e-a51793256a08",
+						"method": "GET",
+						"headers": "",
+						"dataMode": null,
+						"data": null,
+						"url": "{{proto}}://{{domain-url}}/testing/all",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "411",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Aug 2018 03:57:43 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19b-L9NL156o6Ub7cTPyiV15+WXh0gA\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						}
+					],
+					"cookies": [],
+					"request": "1804334f-6817-47ce-9ab3-8259dde7dba7",
+					"collection": "4d3ef2de-6498-40ce-88b0-3de24dbaf136"
+				}
+			],
+			"headers": "Content-Type: application/json\naccess-token: admtoken_access_1\napp-version: {{app-version}}\nplatform: {{platform}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "43d6df76-afac-4ac9-885f-b80de1ac6ef6",
+			"name": "List all testing with pagination",
+			"url": "{{proto}}://{{domain-url}}/testing",
+			"description": "Get testing data with pagination",
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				},
+				{
+					"key": "access-token",
+					"value": "{{access-token}}",
+					"type": "text"
+				},
+				{
+					"key": "app-version",
+					"value": "{{app-version}}",
+					"type": "text"
+				},
+				{
+					"key": "platform",
+					"value": "{{platform}}",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a7cf5241-afdc-4647-a95f-327c072466d8",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"folder": "7a68136b-b9bb-4f42-8c15-82759cc612ad",
+			"responses": [
+				{
+					"id": "b1dc088e-0a9c-463b-8d1d-f14120bd3e94",
+					"name": "List all testing with pagination",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\"status\":\"success\",\"statusCode\":200,\"payload\":{\"data\":[{\"test_id\":2,\"test_name\":\"john doe\",\"test_type\":\"member\",\"created_date\":\"2018-08-28 11:00:57\",\"updated_date\":\"2018-08-29 03:57:06\"},{\"test_id\":3,\"test_name\":\"john doe\",\"test_type\":\"member\",\"created_date\":\"2018-08-28 11:37:05\",\"updated_date\":null},{\"test_id\":5,\"test_name\":\"john doe\",\"test_type\":\"member\",\"created_date\":\"2018-08-29 03:57:34\",\"updated_date\":null}],\"total_row\":3,\"perpage\":20}}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "dcfd98cd-94f2-47fb-9fc0-524789b1f376",
+						"method": "GET",
+						"headers": "",
+						"dataMode": null,
+						"data": null,
+						"url": "{{proto}}://{{domain-url}}/testing",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": []
+					},
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "447",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Aug 2018 03:58:01 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1bf-qpiJfsiZMhM4j3dCT5XHrd479kM\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						}
+					],
+					"cookies": [],
+					"request": "43d6df76-afac-4ac9-885f-b80de1ac6ef6",
+					"collection": "4d3ef2de-6498-40ce-88b0-3de24dbaf136"
+				}
+			],
+			"headers": "Content-Type: application/json\naccess-token: {{access-token}}\napp-version: {{app-version}}\nplatform: {{platform}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "5aba14e8-7249-47a3-8d72-d9afb886c1c8",
+			"name": "Get a testing",
+			"url": "{{proto}}://{{domain-url}}/testing/{{test_id}}",
+			"description": "Get a testing by test_id",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				},
+				{
+					"key": "access-token",
+					"value": "admtoken_access_1",
+					"type": "text"
+				},
+				{
+					"key": "app-version",
+					"value": "{{app-version}}",
+					"type": "text"
+				},
+				{
+					"key": "platform",
+					"value": "{{platform}}",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c5040bcd-3161-41ab-b547-4d78376e0cb4",
+						"exec": [
+							"pm.variables.set(\"test_id\", \"1\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"folder": "7a68136b-b9bb-4f42-8c15-82759cc612ad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"responses": [
+				{
+					"id": "a614b26d-62e7-44e7-b86e-0d7811292d64",
+					"name": "Get a testing",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\"status\":\"success\",\"statusCode\":200,\"payload\":{\"test_id\":1,\"test_name\":\"john doe\",\"test_type\":\"member\",\"created_date\":\"2018-08-29 19:19:34\",\"updated_date\":\"2018-08-30 11:56:39\"}}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "0404b976-b98c-4d55-badd-9f75da4d7733",
+						"method": "GET",
+						"headers": "Content-Type: application/json\naccess_token: {{access-token}}",
+						"dataMode": null,
+						"data": null,
+						"url": "{{proto}}://{{domain-url}}/testing/{{test_id}}",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "access_token",
+								"value": "{{access-token}}"
+							}
+						]
+					},
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "179",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 Aug 2018 04:59:30 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b3-xlwMKM23VO2S+MMflsDrGt6lm/Q\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						}
+					],
+					"cookies": [],
+					"request": "5aba14e8-7249-47a3-8d72-d9afb886c1c8",
+					"collection": "4d3ef2de-6498-40ce-88b0-3de24dbaf136"
+				}
+			],
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\naccess-token: admtoken_access_1\napp-version: {{app-version}}\nplatform: {{platform}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "77309fa8-e1d3-41dc-bb2f-e0a3f1c9595a",
+			"name": "Delete a testing",
+			"url": "{{proto}}://{{domain-url}}/testing/{{test_id}}",
+			"description": "Delete a testing\n\n| Param / Variable | Description |\n| ------ | ------ |\n| test_id | a valid testing id |",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				},
+				{
+					"key": "access-token",
+					"value": "{{access-token}}",
+					"type": "text"
+				},
+				{
+					"key": "app-version",
+					"value": "{{app-version}}",
+					"type": "text"
+				},
+				{
+					"key": "platform",
+					"value": "{{platform}}",
+					"type": "text"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "cb304ff8-d624-4de4-867d-5652da9f3b58",
+						"exec": [
+							"pm.variables.set(\"test_id\", \"5\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"folder": "7a68136b-b9bb-4f42-8c15-82759cc612ad",
+			"responses": [
+				{
+					"id": "670c6168-efa0-4b7c-8f26-11b174e87df9",
+					"name": "Delete a testing",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\"status\":\"success\",\"statusCode\":200,\"payload\":{\"code\":\"success_delete\",\"en\":\"Success Delete Test ID: 4\"}}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "b7c421da-fc05-4191-bc82-17b4c2e13ae4",
+						"method": "DELETE",
+						"headers": "Content-Type: application/json",
+						"dataMode": "raw",
+						"data": "{\n\t\"test_name\": \"john doe\",\n\t\"test_type\": \"member\"\n}",
+						"url": "{{proto}}://{{domain-url}}/testing/{{test_id}}",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						]
+					},
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "106",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Aug 2018 03:56:49 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6a-k16/Vs+NVekt8sq2KMvR9tCPBvk\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						}
+					],
+					"cookies": [],
+					"request": "77309fa8-e1d3-41dc-bb2f-e0a3f1c9595a",
+					"collection": "4d3ef2de-6498-40ce-88b0-3de24dbaf136"
+				}
+			],
+			"rawModeData": "{\n\t\"test_name\": \"john doe\",\n\t\"test_type\": \"member\"\n}",
+			"headers": "Content-Type: application/json\naccess-token: {{access-token}}\napp-version: {{app-version}}\nplatform: {{platform}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "dd953cb7-fdb1-46f5-a9b3-83cc0373292c",
+			"name": "Create a testing",
+			"url": "{{proto}}://{{domain-url}}/testing/",
+			"description": "Create new testing\n\n| Param / Variable | Description |\n| ------ | ------ |\n| test_name | testing name |\n| test_type | only accept member / vip |",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				},
+				{
+					"key": "access-token",
+					"value": "{{access-token}}",
+					"type": "text"
+				},
+				{
+					"key": "app-version",
+					"value": "{{app-version}}",
+					"type": "text"
+				},
+				{
+					"key": "platform",
+					"value": "{{platform}}",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ce8c4872-c469-4471-99ff-3d5ae0234fd8",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"folder": "7a68136b-b9bb-4f42-8c15-82759cc612ad",
+			"responses": [
+				{
+					"id": "3137388c-e23d-4a19-bdc0-21fb4b7f87b0",
+					"name": "Create a testing",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\"status\":\"success\",\"statusCode\":200,\"payload\":{\"test_id\":5,\"test_name\":\"john doe\",\"test_type\":\"member\",\"created_date\":\"2018-08-29 03:57:34\",\"updated_date\":null}}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "7bf47bc3-94fa-4177-8488-b556b98a2ad0",
+						"method": "POST",
+						"headers": "Content-Type: application/json",
+						"dataMode": "raw",
+						"data": "{\n\t\"test_name\": \"john doe\",\n\t\"test_type\": \"member\"\n}",
+						"url": "{{proto}}://{{domain-url}}/testing/",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						]
+					},
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Aug 2018 03:57:34 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a2-vg/SEoL52YfcxPt6y2RVlufo4eg\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						}
+					],
+					"cookies": [],
+					"request": "dd953cb7-fdb1-46f5-a9b3-83cc0373292c",
+					"collection": "4d3ef2de-6498-40ce-88b0-3de24dbaf136"
+				}
+			],
+			"rawModeData": "{\n\t\"test_name\": \"john doe\",\n\t\"test_type\": \"member\"\n}",
+			"headers": "Content-Type: application/json\naccess-token: {{access-token}}\napp-version: {{app-version}}\nplatform: {{platform}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "f6c85455-1a6c-49c5-adda-9dd4cfb4902d",
+			"name": "Edit a testing",
+			"url": "{{proto}}://{{domain-url}}/testing/{{test_id}}",
+			"description": "Edit a testing\n\n| Param / Variable | Description |\n| ------ | ------ |\n| test_id | a valid testing id |\n| test_name | testing name |\n| test_type | only accept member / vip |",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"type": "text"
+				},
+				{
+					"key": "access-token",
+					"value": "{{access-token}}",
+					"type": "text"
+				},
+				{
+					"key": "app-version",
+					"value": "{{app-version}}",
+					"type": "text"
+				},
+				{
+					"key": "platform",
+					"value": "{{platform}}",
+					"type": "text"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8f98d8cc-798f-4ea7-86dd-53a0a67d0760",
+						"exec": [
+							"pm.variables.set(\"test_id\", \"1\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"folder": "7a68136b-b9bb-4f42-8c15-82759cc612ad",
+			"responses": [
+				{
+					"id": "d51ddc32-44ef-4ede-be21-d4d91599659c",
+					"name": "Edit a testing",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\"status\":\"success\",\"statusCode\":200,\"payload\":{\"test_id\":2,\"test_name\":\"john doe\",\"test_type\":\"member\",\"created_date\":\"2018-08-28 11:00:57\",\"updated_date\":\"2018-08-29 03:57:06\"}}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "7a6f8079-579f-4c96-861f-190e3da7cdb8",
+						"method": "PUT",
+						"headers": "Content-Type: application/json",
+						"dataMode": "raw",
+						"data": "{\n\t\"test_name\": \"john doe\",\n\t\"test_type\": \"member\"\n}",
+						"url": "{{proto}}://{{domain-url}}/testing/{{test_id}}",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						]
+					},
+					"headers": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "179",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Aug 2018 03:57:06 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b3-UZGfI+OPex1Y0apn6fCahZXeJiw\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						}
+					],
+					"cookies": [],
+					"request": "f6c85455-1a6c-49c5-adda-9dd4cfb4902d",
+					"collection": "4d3ef2de-6498-40ce-88b0-3de24dbaf136"
+				}
+			],
+			"rawModeData": "{\n  \"test_name\": \"<b>john doe</b>\",\n  \"test_type\": \"member\"\n}",
+			"headers": "Content-Type: application/json\naccess-token: {{access-token}}\napp-version: {{app-version}}\nplatform: {{platform}}\n",
+			"pathVariables": {}
+		}
+	]
+}
